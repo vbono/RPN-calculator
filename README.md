@@ -24,15 +24,15 @@ You would input this expression on INFIX calculator by entering:
 1 1 + 
 
 The operators follow the operands. Let's say we have multiple numbers we want to compute.
-To input '(two plus four) divided by (two plus one)' we'd say
+To input '(two plus four) divided by (two plus one)' we'd say:
 2 4 + 2 1 + /
-Which gives us an answer of 2
+Which gives us an answer of 2.
 
 This computes the two addition expressions first, then divides those sums.
 
 This expression is also very different from '(two plus four) (divided by two) plus one'
-To write this, we'd say
+To write this, we'd say:
 2 4 + 2 / 1 +
-Which gives us an answer of 4
+Which gives us an answer of 4.
 
 
