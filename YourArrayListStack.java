@@ -3,21 +3,22 @@ package template;
 import java.util.ArrayList;
 
 public class YourArrayListStack implements YourStack {
-	// YOU MUST USE THIS IMPLEMENTATION - just code the methods
+
 	ArrayList<Double> theStack = new ArrayList<>();
 
-
+	// adds number to the ArrayList Stack
 	public void push(Double i) {
 		theStack.add(i);
 	}
-
+	
+	// removes number fro ArrayList Stack
 	public Double pop() {
 		int last = theStack.size()-1;
 		double del = theStack.remove(last);
 		return del;
 	}
 
-	@Override
+	// returns size of the stack
 	public Integer size() {
 		return theStack.size();
 	}
