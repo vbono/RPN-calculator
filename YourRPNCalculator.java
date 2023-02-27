@@ -3,8 +3,7 @@ package template;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class YourRPNCalculator implements SimpleRPNCalculator {
-	// don't change these...
+public class YourRPNCalculator implements SimpleRPNCalculator {.
 	YourStack theStack = null;
 
 	public YourRPNCalculator(YourStack stack) {
@@ -13,7 +12,7 @@ public class YourRPNCalculator implements SimpleRPNCalculator {
 
 
 	public String calculate(String inputString) {
-		// this is probably helpful, but you can remove...
+		// accesses PRNStringTokenizer interface to turn input String to array list
 		ArrayList<String> tokens = RPNStringTokenizer.tokenize(inputString);
 
 		// create array list of valid operators
@@ -86,16 +85,4 @@ public class YourRPNCalculator implements SimpleRPNCalculator {
 		return "'" + inputString + "' is a Bad Token! No good!!!!";
 	}
 
-
-	/*
-	 * 
-	 * 
-	 * if (theStack.size()%2==1) {
-						System.out.println("cant do that");
-
-					} else if (!operators.contains(tokens.get(tokens.size()-1))) {
-						System.out.println("You can't end your expression with a number! Try again");
-
-					} else {
-	 */
 }
