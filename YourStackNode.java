@@ -1,7 +1,7 @@
 package template;
 
 public class YourStackNode {
-	// DO NOT CHANGE THIS!
+
 	private Double item;
 	private YourStackNode next;
 	
