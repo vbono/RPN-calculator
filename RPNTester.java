@@ -5,14 +5,13 @@ import java.util.ArrayList;
 public class RPNTester {
 
 	public static void main(String[] args) {
-		// don't change this method!
-		 
 		
-	
+		// instance of calculator using array list
 		YourRPNCalculator calc = new YourRPNCalculator(new YourArrayListStack());
 		System.out.println("Testing ArrayList version");
 		testRPNCalculator(calc);
 		
+		// instance of calculator using linked list
 		calc = new YourRPNCalculator(new YourLinkedListStack());
 		System.out.println("Testing LinkedList version");
 		testRPNCalculator(calc);
@@ -50,20 +49,5 @@ public class RPNTester {
 		}
 		
 	}
-	
-	/* TOKENIZER TEST
-	 * 	
-	 * System.out.println(RPNStringTokenizer.tokenize("1 1 +")); // 2
-		System.out.println(RPNStringTokenizer.tokenize("1 3 -")); // 2
-		System.out.println(RPNStringTokenizer.tokenize("1 1 + 2 *")); // 4
-		System.out.println(RPNStringTokenizer.tokenize("1 1 2 + *")); // 3
-		System.out.println(RPNStringTokenizer.tokenize("1 1 + 2 2 * -")); // 2
-		System.out.println(RPNStringTokenizer.tokenize("11 bv +")); // bad token
-		System.out.println(RPNStringTokenizer.tokenize("2 3 + -")); // underflow on an operator
-		System.out.println(RPNStringTokenizer.tokenize("2 3 + 4 5 -")); // leftover tokens
-		System.out.println(RPNStringTokenizer.tokenize("1 2 + bv"));
-	 * 
-	 * 
-	 */
 
 }
