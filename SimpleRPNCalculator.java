@@ -19,18 +19,6 @@ public interface SimpleRPNCalculator {
 	 * if I get to the end of the expression and there is not exactly one number on the stack,
 	 *    it's a bad expression.
 	 *    
-	 * FOR YOUR IMPLEMENTATION, 30 points:
-	 * 10 for making something that looks like it works - the input to output happening without a crash
-	 * 10 for implementing LinkedListBasedStack
-	 * 10 for implementing ArrayList
-	 * 
-	 * YOUR CALCULATOR ONLY NEEDS TO WORK FOR +, -, and *
-	 * YOUR CALCULATOR ONLY NEEDS TO WORK ON INTEGERS.
-	 * 
-	 * 5 bonus points for working on Doubles (this is a gimme)
-	 * 5 bonus points for implementing division / (this is deceptively hard, DO THIS LAST!)
-	 * 
-	 * 
 	 */
 
 }
