@@ -2,8 +2,10 @@ package template;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.lang.Math;
 
-public class YourRPNCalculator implements SimpleRPNCalculator {.
+public class YourRPNCalculator implements SimpleRPNCalculator {
+	// don't change these...
 	YourStack theStack = null;
 
 	public YourRPNCalculator(YourStack stack) {
@@ -12,7 +14,7 @@ public class YourRPNCalculator implements SimpleRPNCalculator {.
 
 
 	public String calculate(String inputString) {
-		// accesses PRNStringTokenizer interface to turn input String to array list
+		// this is probably helpful, but you can remove...
 		ArrayList<String> tokens = RPNStringTokenizer.tokenize(inputString);
 
 		// create array list of valid operators
@@ -44,9 +46,9 @@ public class YourRPNCalculator implements SimpleRPNCalculator {.
 				if (!operators.contains(tokens.get(i))) {
 					theStack.push(Double.parseDouble(tokens.get(i)));
 				} else if (!operators.contains(tokens.get(tokens.size()-1))) {
-					return "'" + inputString + "' can't end with a number silly!";
+					return "'" + inputString + "' can't end with a number!";
 				} else if (!operators.contains(tokens.get(0)) && operators.contains(tokens.get(1))) {
-					return "'" + inputString + "' has to start with two numbers";
+					return "'" + inputString + "' must start with two numbers";
 				} else {
 					
 					if (symbols >= nums) {
@@ -76,11 +78,15 @@ public class YourRPNCalculator implements SimpleRPNCalculator {.
 							result = l/r;
 							theStack.push(result);
 							break;
+						case "^":
+							result = Math.pow(l, r);
+							theStack.push(result);
+							break;
 						}
 					}
 				}
 			}	
-			return String.valueOf(result);
+			return "'" + inputString + "' = " + String.valueOf(result);
 		}
 		return "'" + inputString + "' is a Bad Token! No good!!!!";
 	}
